@@ -1,0 +1,11 @@
+# @package _global_
+model:
+  _target_: hswt.model.HSWT
+  vocab_size: ${model.vocab_size}
+  hidden_dim: ${model.hidden_dim}
+  num_heads: ${model.num_heads}
+  hierarchy_config: ${model.hierarchy_config}
+  router_sparsity_target: ${train.router_sparsity_target}
+  router_sparsity_lambda: ${train.router_sparsity_lambda}
+  learning_rate: ${train.learning_rate}
+

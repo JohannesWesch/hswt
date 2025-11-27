@@ -1,0 +1,35 @@
+defaults:
+  - model: hswt
+  - data: redpajama
+  - train: default
+
+model:
+  vocab_size: 32000
+  hidden_dim: 768
+  num_heads: 12
+  hierarchy_config:
+    - name: raw
+      num_layers: 3
+      window_size: 256
+    - name: sentence
+      num_layers: 3
+      window_size: 128
+      router_sparsity_target: 0.05
+    - name: section
+      num_layers: 6
+      window_size: 64
+      router_sparsity_target: 0.05
+
+data:
+  max_length: 8192
+  batch_size: 32
+  num_hierarchy_levels: 3
+
+train:
+  max_epochs: 10
+  learning_rate: 1e-4
+  router_sparsity_target: 0.05
+  router_sparsity_lambda: 0.1
+
+seed: 42
+

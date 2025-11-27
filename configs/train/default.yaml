@@ -1,0 +1,6 @@
+# @package _global_
+max_epochs: 10
+learning_rate: 1e-4
+router_sparsity_target: 0.05
+router_sparsity_lambda: 0.1
+

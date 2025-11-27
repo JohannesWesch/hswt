@@ -1,0 +1,10 @@
+# @package _global_
+data:
+  _target_: hswt.data.HSWTDataModule
+  dataset_name: redpajama
+  tokenizer_name: meta-llama/Llama-2-7b-hf
+  max_length: ${data.max_length}
+  batch_size: ${data.batch_size}
+  num_hierarchy_levels: ${data.num_hierarchy_levels}
+  phase: supervised
+
